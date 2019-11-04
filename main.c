@@ -6,7 +6,7 @@
 /*   By: braimbau <braimbau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 09:39:31 by braimbau          #+#    #+#             */
-/*   Updated: 2019/11/02 17:41:18 by braimbau         ###   ########.fr       */
+/*   Updated: 2019/11/04 12:46:26 by braimbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,27 @@ int main(int argc, char **argv)
 	char *str;
 	int a;
 	
-	a = 0;
+	a = 1;
 	i = 0;
+	if (argc == 1)
+	while(a)
+	{
+		a = get_next_line(1, &str);
+		printf("%s\n",str);
+		free(str);
+	}
+	if (argc == 1)
+		return (1);
+	a = 0;
 	while (i < argc - 1)
 	{
-    	v[i] = 1;
+		v[i] = 1;
 		i++;
 	}
 	i = 0;
 	while (i < argc - 1)
 	{
-    	fd[i] = open(argv[i + 1], O_RDONLY);
+		fd[i] = open(argv[i + 1], O_RDONLY);
 		i++;
 	}
 	while (1)
